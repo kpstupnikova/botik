@@ -356,10 +356,6 @@ async def process_message(message: types.Message) -> None:
         with open("reviews.txt", "a") as file:
             file.write(review_text + "\n")
         await message.answer(f"Отзыв '{review_text}' сохранен")
-    else:
-        # Если пользователь пишет не во время написания отзыва, просто игнорируем сообщение
-        pass
-
 
 @dp.message()
 async def echo(message: Message):
